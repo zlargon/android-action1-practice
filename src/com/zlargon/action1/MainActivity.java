@@ -15,5 +15,13 @@ public class MainActivity extends Activity {
         final ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.setDisplayShowTitleEnabled(false);
+
+        // add fragment 1
+        Fragment1 fragment1 = new Fragment1();
+        actionBar.addTab(
+            actionBar.newTab()
+                     .setText("Tab 1")
+                     .setTabListener(new MyTabListener(fragment1))
+        );
     }
 }
