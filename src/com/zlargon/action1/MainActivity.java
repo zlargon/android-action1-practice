@@ -23,5 +23,13 @@ public class MainActivity extends Activity {
                      .setText("Tab 1")
                      .setTabListener(new MyTabListener(fragment1))
         );
+
+        // add fragment 2
+        Fragment2 fragment2 = new Fragment2();
+        actionBar.addTab(
+            actionBar.newTab()
+                     .setText("Tab 2")
+                     .setTabListener(new MyTabListener(fragment2))
+        );
     }
 }
